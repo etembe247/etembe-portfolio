@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dan Peter Etembe | Nigerian Student, Solo Developer &amp; Technology Enthusiast</title>
+  <meta name="description" content="Official website of Dan Peter Etembe, a Nigerian student, solo developer, technology enthusiast and problem solver from Cross River State, Nigeria, currently based in Lagos." />
+  <meta name="keywords" content="Dan Peter Etembe, Dan Etembe, Peter Etembe, Dan Peter, Dan Peter Etembe Nigeria, Dan Peter Etembe developer, Dan Peter Etembe student, Dan Peter Etembe technology, Dan Peter Etembe Cross River State, Dan Peter Etembe Lagos" />
+  <meta name="author" content="Dan Peter Etembe" />
+  <link rel="canonical" href="https://danpeteretembe.com/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danpeteretembe.com/" />
+  <meta property="og:title" content="Dan Peter Etembe | Nigerian Student, Solo Developer &amp; Technology Enthusiast" />
+  <meta property="og:description" content="Official personal digital identity and portfolio of Dan Peter Etembe. Discover his story, education, achievements, projects, and technology articles." />
+  <meta property="og:image" content="https://danpeteretembe.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Dan Peter Etembe | Nigerian Student, Solo Developer &amp; Technology Enthusiast" />
+  <meta property="twitter:description" content="Official website of Dan Peter Etembe, a Nigerian student, solo developer, technology enthusiast and problem solver from Cross River State, Nigeria, currently based in Lagos." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Supabase JS Client CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Structured Data: Person & WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://danpeteretembe.com/#person",
+        "name": "Dan Peter Etembe",
+        "alternateName": ["Dan Etembe", "Peter Etembe", "Dan Peter"],
+        "description": "Nigerian student, solo developer, technology enthusiast, leader, and problem solver.",
+        "nationality": {
+          "@type": "Country",
+          "name": "Nigeria"
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Lagos, Nigeria"
+        },
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Wanikade, Yala Local Government, Cross River State, Nigeria"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "St. Finian's Primary School"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Immaculate Heart Comprehensive High School"
+          }
+        ],
+        "jobTitle": "Solo Developer & High School Student",
+        "knowsAbout": [
+          "Software Development",
+          "Web Development",
+          "Progressive Web Apps",
+          "Artificial Intelligence",
+          "Problem Solving",
+          "Leadership",
+          "Critical Thinking"
+        ],
+        "url": "https://danpeteretembe.com/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://danpeteretembe.com/#website",
+        "url": "https://danpeteretembe.com/",
+        "name": "Dan Peter Etembe Official Website",
+        "description": "Official personal digital identity and authority website of Dan Peter Etembe.",
+        "publisher": {
+          "@id": "https://danpeteretembe.com/#person"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /*
+     * Vibrant Multi-Color Flat System + Pop Culture Stickers (Anime, Football, Gaming, Code)
+     */
+    :root {
+      --c-white: #ffffff;
+      --c-black: #0d1b2a;
+      
+      --c-blue: #123b63;
+      --c-gold: #c99a3d;
+      --c-coral: #e63946;
+      --c-emerald: #2a9d8f;
+      --c-purple: #6a4c93;
+      --c-amber: #f4a261;
+      --c-teal: #1e6b7b;
+
+      --bg-cream: #fdfbf7;
+      --bg-soft-blue: #eef5fc;
+      --bg-soft-green: #f0f7f5;
+      --bg-soft-purple: #f5f0f8;
+      --bg-soft-amber: #fff8f0;
+
+      --border-black: #0d1b2a;
+      --border-subtle: #d0d7de;
+
+      --font-display: 'Inter Tight', 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --container-width: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--c-black);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    /* STICKERS & BADGES */
+    .sticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 800;
+      border: 2px solid var(--border-black);
+      box-shadow: 3px 3px 0px var(--border-black);
+      transform: rotate(-2deg);
+      user-select: none;
+      transition: transform 0.2s ease;
+    }
+
+    .sticker:hover {
+      transform: rotate(2deg) scale(1.05);
+    }
+
+    .sticker-anime { background-color: var(--c-coral); color: var(--c-white); }
+    .sticker-football { background-color: var(--c-emerald); color: var(--c-white); }
+    .sticker-code { background-color: var(--c-purple); color: var(--c-white); }
+    .sticker-gold { background-color: var(--c-gold); color: var(--c-black); }
+    .sticker-amber { background-color: var(--c-amber); color: var(--c-black); }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border: 2px solid var(--border-black);
+      margin-bottom: 16px;
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      margin-bottom: 16px;
+      color: var(--c-black);
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: #333;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border: 2.5px solid var(--border-black);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: 4px 4px 0px var(--border-black);
+    }
+
+    .btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--border-black);
+    }
+
+    .btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--border-black);
+    }
+
+    .btn-blue { background-color: var(--c-blue); color: var(--c-white); }
+    .btn-gold { background-color: var(--c-gold); color: var(--c-black); }
+    .btn-coral { background-color: var(--c-coral); color: var(--c-white); }
+    .btn-emerald { background-color: var(--c-emerald); color: var(--c-white); }
+    .btn-purple { background-color: var(--c-purple); color: var(--c-white); }
+    .btn-amber { background-color: var(--c-amber); color: var(--c-black); }
+    .btn-white { background-color: var(--c-white); color: var(--c-black); }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border-width: 2px;
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    /* TOP STRIP */
+    .top-strip {
+      background-color: var(--c-purple);
+      color: var(--c-white);
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      padding: 10px 0;
+      border-bottom: 2px solid var(--border-black);
+    }
+    .top-strip-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-strip-highlight {
+      color: var(--c-gold);
+      font-weight: 800;
+    }
+
+    /* HEADER & STICKY NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--c-white);
+      border-bottom: 3px solid var(--border-black);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--c-black);
+    }
+
+    .brand-initials {
+      width: 44px;
+      height: 44px;
+      background-color: var(--c-coral);
+      color: var(--c-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 800;
+      font-size: 1.3rem;
+      border: 2px solid var(--border-black);
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--c-black);
+      padding: 6px 12px;
+      border: 2px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: var(--c-gold);
+      border-color: var(--border-black);
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background-color: var(--c-amber);
+      border: 2px solid var(--border-black);
+      padding: 8px 14px;
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 95px 0;
+      border-bottom: 3px solid var(--border-black);
+    }
+
+    .hero-section {
+      background-color: var(--bg-soft-blue);
+      padding: 90px 0 110px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background-color: var(--c-emerald);
+      color: var(--c-white);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border: 2px solid var(--border-black);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 5.8vw, 4.4rem);
+      color: var(--c-black);
+      margin-bottom: 14px;
+      line-height: 1.05;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+      font-style: italic;
+      color: var(--c-coral);
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .hero-intro {
+      font-size: 1.18rem;
+      color: #222;
+      margin-bottom: 32px;
+      max-width: 620px;
+      line-height: 1.65;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 36px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--c-white);
+      padding: 8px 14px;
+      border: 2px solid var(--border-black);
+      box-shadow: 3px 3px 0px var(--border-black);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-portrait-card {
+      background-color: var(--c-white);
+      border: 3px solid var(--border-black);
+      padding: 20px;
+      box-shadow: 12px 12px 0px var(--c-purple);
+      position: relative;
+    }
+
+    .hero-portrait-frame {
+      width: 100%;
+      height: 380px;
+      background-color: var(--c-blue);
+      border: 2px solid var(--border-black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--c-white);
+      position: relative;
+    }
+
+    .hero-portrait-svg {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 16px;
+    }
+
+    .portrait-badge {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background-color: var(--c-gold);
+      color: var(--c-black);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border: 2px solid var(--border-black);
+    }
+
+    .about-section { background-color: var(--bg-cream); }
+    .about-grid { display: grid; grid-template-columns: 1fr 420px; gap: 50px; }
+    .about-text p { font-size: 1.08rem; margin-bottom: 22px; color: #222; }
+
+    .identity-card {
+      background-color: var(--c-white);
+      border: 3px solid var(--border-black);
+      padding: 28px;
+      box-shadow: 8px 8px 0px var(--c-emerald);
+    }
+
+    .identity-card-header {
+      border-bottom: 3px solid var(--border-black);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--c-emerald);
+      text-transform: uppercase;
+    }
+
+    .identity-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1.5px solid var(--border-subtle);
+      font-size: 0.92rem;
+    }
+
+    .identity-label { font-weight: 800; color: var(--c-black); }
+    .identity-value { text-align: right; color: #333; font-weight: 600; }
+
+    .story-section { background-color: var(--bg-soft-amber); }
+    .timeline-container { position: relative; margin-top: 40px; }
+    .timeline-container::before {
+      content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px;
+      background-color: var(--border-black); transform: translateX(-50%);
+    }
+    .timeline-item { display: flex; justify-content: flex-end; padding-right: 40px; position: relative; margin-bottom: 40px; width: 50%; }
+    .timeline-item.right { align-self: flex-end; justify-content: flex-start; padding-right: 0; padding-left: 40px; margin-left: 50%; }
+    .timeline-dot { width: 24px; height: 24px; background-color: var(--c-coral); border: 3px solid var(--border-black); position: absolute; right: -12px; top: 16px; z-index: 10; }
+    .timeline-item.right .timeline-dot { left: -12px; right: auto; }
+    .timeline-content { background-color: var(--c-white); border: 3px solid var(--border-black); padding: 24px; width: 100%; box-shadow: 6px 6px 0px var(--border-black); }
+    .timeline-year { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; color: var(--c-white); background-color: var(--c-purple); padding: 4px 10px; border: 2px solid var(--border-black); display: inline-block; margin-bottom: 12px; }
+    .timeline-title { font-size: 1.25rem; margin-bottom: 8px; }
+
+    .education-section { background-color: var(--bg-soft-purple); }
+    .education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 30px; }
+    .edu-card { background-color: var(--c-white); border: 3px solid var(--border-black); padding: 32px; position: relative; box-shadow: 8px 8px 0px var(--c-blue); }
+    .edu-card-tag { position: absolute; top: -16px; right: 20px; background-color: var(--c-gold); color: var(--c-black); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; padding: 4px 12px; border: 2px solid var(--border-black); }
+    .edu-institution { font-size: 1.45rem; color: var(--c-black); margin-bottom: 8px; }
+    .edu-status { font-family: var(--font-mono); font-size: 0.95rem; color: var(--c-coral); font-weight: 800; margin-bottom: 16px; }
+
+    .achievements-section { background-color: var(--bg-soft-green); }
+    .achievements-filters { display: flex; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
+    .filter-btn { background-color: var(--c-white); border: 2px solid var(--border-black); padding: 10px 20px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; cursor: pointer; box-shadow: 3px 3px 0px var(--border-black); transition: all 0.15s ease; }
+    .filter-btn.active, .filter-btn:hover { background-color: var(--c-coral); color: var(--c-white); }
+    .achievements-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+    .achievement-card { background-color: var(--c-white); border: 3px solid var(--border-black); padding: 24px; box-shadow: 6px 6px 0px var(--c-emerald); transition: transform 0.15s ease; cursor: pointer; }
+    .achievement-card:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0px var(--c-emerald); }
+    .achievement-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .achievement-category { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; background-color: var(--c-gold); color: var(--c-black); padding: 4px 10px; border: 2px solid var(--border-black); }
+    .achievement-date { font-family: var(--font-mono); font-size: 0.82rem; color: #555; font-weight: 700; }
+    .achievement-title { font-size: 1.3rem; margin-bottom: 10px; }
+
+    .skills-section { background-color: var(--bg-cream); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+    .skill-box { background-color: var(--c-white); border: 3px solid var(--border-black); padding: 28px; box-shadow: 6px 6px 0px var(--c-purple); }
+    .skill-box-title { font-size: 1.25rem; color: var(--c-purple); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    .skill-list { list-style: none; }
+    .skill-list li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 0.98rem; font-weight: 600; }
+    .skill-list li::before { content: '■'; position: absolute; left: 0; color: var(--c-coral); font-size: 0.85rem; }
+
+    .tech-section { background-color: var(--bg-soft-blue); }
+    .tech-interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .tech-card { background-color: var(--c-white); border: 3px solid var(--border-black); padding: 28px; box-shadow: 6px 6px 0px var(--c-blue); }
+    .tech-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--c-blue); }
+
+    .projects-section { background-color: var(--bg-soft-amber); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+    .project-card { background-color: var(--c-white); border: 3px solid var(--border-black); display: flex; flex-direction: column; box-shadow: 8px 8px 0px var(--c-amber); }
+    .project-body { padding: 28px; flex: 1; }
+    .project-status { display: inline-block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border: 2px solid var(--border-black); background-color: var(--c-emerald); color: var(--c-white); margin-bottom: 16px; }
+    .project-title { font-size: 1.45rem; margin-bottom: 12px; }
+    .project-techs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .tech-tag { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; background-color: var(--bg-cream); border: 1.5px solid var(--border-black); padding: 3px 10px; }
+    .project-footer { border-top: 3px solid var(--border-black); padding: 16px 28px; background-color: var(--bg-soft-amber); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+
+    .blog-section { background-color: var(--bg-soft-purple); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+    .blog-card { background-color: var(--c-white); border: 3px solid var(--border-black); display: flex; flex-direction: column; box-shadow: 8px 8px 0px var(--c-purple); }
+    .blog-card-img { height: 180px; background-color: var(--c-purple); border-bottom: 3px solid var(--border-black); display: flex; align-items: center; justify-content: center; color: var(--c-white); font-family: var(--font-serif); font-size: 1.5rem; font-style: italic; padding: 20px; text-align: center; }
+    .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .blog-meta { font-family: var(--font-mono); font-size: 0.8rem; color: #555; margin-bottom: 12px; display: flex; gap: 10px; font-weight: 600; }
+    .blog-category { color: var(--c-coral); font-weight: 800; }
+    .blog-title { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.25; }
+    .blog-excerpt { font-size: 0.98rem; color: #333; margin-bottom: 20px; flex: 1; }
+
+    .modal-backdrop { position: fixed; inset: 0; background-color: rgba(13, 27, 42, 0.85); z-index: 2000; display: none; overflow-y: auto; padding: 40px 20px; }
+    .modal-backdrop.active { display: flex; justify-content: center; }
+    .modal-card { background-color: var(--c-white); border: 4px solid var(--border-black); max-width: 880px; width: 100%; padding: 44px; position: relative; margin: auto; box-shadow: 12px 12px 0px var(--c-gold); }
+    .close-modal-btn { position: absolute; top: 20px; right: 20px; background-color: var(--c-coral); color: var(--c-white); border: 3px solid var(--border-black); width: 44px; height: 44px; font-weight: 900; font-size: 1.3rem; cursor: pointer; box-shadow: 3px 3px 0px var(--border-black); }
+
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; }
+    .form-control { width: 100%; padding: 12px 16px; border: 2.5px solid var(--border-black); font-family: var(--font-body); font-size: 1rem; background-color: var(--c-white); }
+    .form-control:focus { outline: none; border-color: var(--c-blue); box-shadow: 3px 3px 0px var(--border-black); }
+    textarea.form-control { min-height: 140px; resize: vertical; }
+
+    .contact-section { background-color: var(--bg-soft-green); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; }
+    .contact-info-card { background-color: var(--c-blue); color: var(--c-white); border: 3.5px solid var(--border-black); padding: 40px; box-shadow: 8px 8px 0px var(--border-black); }
+    .contact-info-card h3 { font-size: 1.9rem; margin-bottom: 16px; color: var(--c-gold); }
+    .social-placeholders { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .social-btn { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; padding: 8px 16px; border: 2px solid var(--c-white); color: var(--c-white); background-color: var(--c-teal); cursor: pointer; box-shadow: 3px 3px 0px var(--border-black); }
+    .contact-form-card { background-color: var(--c-white); border: 3.5px solid var(--border-black); padding: 40px; box-shadow: 8px 8px 0px var(--c-emerald); }
+
+    footer { background-color: var(--c-black); color: var(--c-white); padding: 60px 0 30px; border-top: 4px solid var(--c-gold); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand { font-family: var(--font-display); font-size: 1.7rem; font-weight: 900; color: var(--c-gold); margin-bottom: 12px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ddd; font-size: 0.95rem; font-weight: 600; }
+    .footer-links a:hover { color: var(--c-gold); text-decoration: underline; }
+    .footer-bottom { border-top: 1px solid #334155; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.85rem; color: #94a3b8; flex-wrap: wrap; gap: 16px; }
+
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-portrait-card { max-width: 480px; margin: 0 auto; }
+      .timeline-container::before { left: 20px; }
+      .timeline-item, .timeline-item.right { width: 100%; padding-left: 50px; padding-right: 0; margin-left: 0; }
+      .timeline-dot, .timeline-item.right .timeline-dot { left: 10px; right: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; background-color: var(--c-white); border-bottom: 3px solid var(--border-black); flex-direction: column; padding: 24px; gap: 16px; }
+      .nav-links.active { display: flex; }
+      .mobile-menu-btn { display: block; }
+      .top-strip { display: none; }
+      section { padding: 65px 0; }
+      .modal-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP METADATA STRIP -->
+  <div class="top-strip">
+    <div class="container top-strip-content">
+      <div>
+        <span><strong class="top-strip-highlight">LOCATION:</strong> Lagos, Nigeria (Origin: Cross River State)</span> &nbsp;|&nbsp;
+        <span><strong class="top-strip-highlight">STATUS:</strong> Student &amp; Solo Developer</span>
+      </div>
+      <div>
+        <span><strong class="top-strip-highlight">CORE VISION:</strong> To be the best in whatever I do.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-initials">DPE</div>
+        <span>Dan Peter Etembe</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">MENU ☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="openAdminModal('blog')" style="background: none; border: none; font-size: 1.1rem; cursor: pointer;" title="Admin Portal">🔒</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+            <span class="sticker sticker-anime">⚡ Solo Dev Anime Vibe</span>
+            <span class="sticker sticker-football">⚽ Real Madrid Fan</span>
+            <span class="sticker sticker-code">💻 Code Wizard</span>
+          </div>
+
+          <div class="hero-eyebrow">Official Digital Identity &amp; Portfolio</div>
+          <h1 class="hero-title">Dan Peter Etembe</h1>
+          <div class="hero-headline">Student. Developer. Problem Solver. Future Builder.</div>
+          <p class="hero-intro">
+            A Nigerian student and solo developer passionate about technology, innovation, problem solving, leadership, and building useful digital experiences.
+          </p>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span>📍</span> <strong>Location:</strong> Lagos, Nigeria
+            </div>
+            <div class="hero-meta-item">
+              <span>🇳🇬</span> <strong>Origin:</strong> Cross River State
+            </div>
+            <div class="hero-meta-item" style="background-color: var(--c-gold);">
+              <span>⚽</span> <strong>Club:</strong> Real Madrid CF
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#story" class="btn btn-coral">Explore My Story</a>
+            <a href="#projects" class="btn btn-gold">View My Work</a>
+            <a href="#contact" class="btn btn-emerald">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait-card">
+          <div class="hero-portrait-frame">
+            <svg class="hero-portrait-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="38" r="24" fill="#C99A3D" stroke="#0D1B2A" stroke-width="3"/>
+              <path d="M12 90C12 68 28 58 50 58C72 58 88 68 88 90" fill="#FFFFFF" stroke="#0D1B2A" stroke-width="3"/>
+            </svg>
+            <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; letter-spacing: 0.05em;">DAN PETER ETEMBE</div>
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--c-gold); font-weight: 800;">SOLO DEVELOPER</div>
+            <div class="portrait-badge">VERIFIED PROFILE</div>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 14px;">
+            <span class="sticker sticker-gold" style="font-size: 0.75rem;">👑 Best Student 25/26</span>
+            <span class="sticker sticker-amber" style="font-size: 0.75rem;">🍚 Rice Lover</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-gold); color: var(--c-black);">01 / BIOGRAPHY</div>
+      <h2 class="section-title">Who is Dan Peter Etembe?</h2>
+      <p class="section-subtitle">Understanding the background, mindset, leadership credentials, and ambition driving Dan Peter Etembe.</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            <strong>Dan Peter Etembe</strong> is a Nigerian student, solo developer, and technology enthusiast based in Lagos, Nigeria, with roots in Wanikade, Yala Local Government Area of Cross River State. Built upon a foundation of discipline, academic rigor, and natural curiosity, he combines analytical thinking with creative problem-solving.
+          </p>
+          <p>
+            His technological journey is self-driven. Interested in software engineering, web technologies, and progressive web apps, Dan approaches digital building not just as code, but as a discipline of planning, critical thinking, and structural execution.
+          </p>
+          <p>
+            Beyond technical pursuits, Dan Peter Etembe has established a strong record of leadership throughout his school life—serving as Class Captain, Labour Prefect, and Special Duty Prefect, while earning consecutive awards as Best Prefect and Best Student.
+          </p>
+          <p>
+            His vision is simple yet uncompromising: <strong>"To be the best in whatever I do."</strong>
+          </p>
+          <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#education" class="btn btn-blue btn-sm">Academic History</a>
+            <a href="#achievements" class="btn btn-purple btn-sm">Leadership Record</a>
+          </div>
+        </div>
+
+        <div class="identity-card">
+          <div class="identity-card-header">Identity Matrix</div>
+          <div class="identity-row">
+            <span class="identity-label">Full Name</span>
+            <span class="identity-value">Dan Peter Etembe</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Nationality</span>
+            <span class="identity-value">Nigerian 🇳🇬</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">State of Origin</span>
+            <span class="identity-value">Cross River State</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">L.G.A. &amp; Community</span>
+            <span class="identity-value">Yala / Wanikade</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Current Location</span>
+            <span class="identity-value">Lagos, Nigeria</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Education Status</span>
+            <span class="identity-value">High School Student</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Primary Role</span>
+            <span class="identity-value">Solo Developer</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Fav Club &amp; Food</span>
+            <span class="identity-value">Real Madrid ⚽ | Rice 🍚</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MY STORY TIMELINE -->
+  <section class="story-section" id="story">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-purple); color: var(--c-white);">02 / JOURNEY</div>
+      <h2 class="section-title">My Story</h2>
+      <p class="section-subtitle">A chronological record of growth, education, leadership responsibility, and technological development.</p>
+
+      <div class="timeline-container">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">EARLY YEARS</span>
+            <h3 class="timeline-title">Roots &amp; Early Foundation</h3>
+            <p>Born into a family rooted in Cross River State (Wanikade, Yala LGA). Cultivated a strong work ethic, curiosity, and respect for academic excellence from a young age.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">PRIMARY EDUCATION</span>
+            <h3 class="timeline-title">St. Finian's Primary School 🏫</h3>
+            <p>Attended St. Finian's Primary School. Demonstrated academic brilliance by finishing 1st position 3 times and serving as Class Captain.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">HIGH SCHOOL</span>
+            <h3 class="timeline-title">Immaculate Heart Comprehensive High School 🎓</h3>
+            <p>Enrolled at Immaculate Heart Comprehensive High School. Appointed Assistant Class Captain (2 terms) and later Class Captain, displaying early organizational leadership.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">TECHNOLOGY START</span>
+            <h3 class="timeline-title">Solo Developer Journey 💻</h3>
+            <p>Began exploring computer technology, web development logic, programming fundamentals, software architecture, and problem solving.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 - 2026</span>
+            <h3 class="timeline-title">Prefectship &amp; Academic Honors 👑</h3>
+            <p>Served as Labour Prefect and Special Duty Prefect. Awarded Best Prefect (2024/2025 &amp; 2025/2026) and Best Student 2025/2026.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">FUTURE HORIZON</span>
+            <h3 class="timeline-title">Software Engineering &amp; Entrepreneurship 🚀</h3>
+            <p>Aiming to build high-impact digital products, pursue advanced technology education, and establish innovative enterprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. EDUCATION SECTION -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-blue); color: var(--c-white);">03 / ACADEMICS</div>
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">Academic institutions shaping Dan Peter Etembe's knowledge and leadership discipline.</p>
+
+      <div class="education-grid">
+        <div class="edu-card">
+          <div class="edu-card-tag">PRIMARY SCHOOL</div>
+          <h3 class="edu-institution">St. Finian's Primary School 🥇</h3>
+          <div class="edu-status">Graduated with Distinction</div>
+          <p>Completed primary education with top honors, achieving 1st position in class three separate times and leading peers as Class Captain.</p>
+          <div style="margin-top: 16px;">
+            <a href="#achievements" class="btn btn-amber btn-sm">View Honors</a>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-card-tag">HIGH SCHOOL</div>
+          <h3 class="edu-institution">Immaculate Heart Comprehensive High School 🏆</h3>
+          <div class="edu-status">Current High School Student</div>
+          <p>Active student excelling in academic studies, leadership, labor management, special duties, and overall student governance.</p>
+          <div style="margin-top: 16px;">
+            <a href="#achievements" class="btn btn-coral btn-sm">View Prefect Roles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ACHIEVEMENTS & LEADERSHIP -->
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-coral); color: var(--c-white);">04 / RECOGNITION</div>
+      <h2 class="section-title">Achievements &amp; Leadership</h2>
+      <p class="section-subtitle">Verified academic records, leadership appointments, and merit awards earned by Dan Peter Etembe.</p>
+
+      <div class="achievements-filters">
+        <button class="filter-btn active" onclick="filterAchievements('all', event)">ALL RECORDS</button>
+        <button class="filter-btn" onclick="filterAchievements('academic', event)">ACADEMIC</button>
+        <button class="filter-btn" onclick="filterAchievements('leadership', event)">LEADERSHIP</button>
+        <button class="filter-btn" onclick="filterAchievements('recognition', event)">RECOGNITION</button>
+      </div>
+
+      <div class="achievements-grid" id="achievementsGrid">
+        <div class="achievement-card" data-cat="academic">
+          <div class="achievement-header"><span class="achievement-category">Academic</span><span class="achievement-date">Primary</span></div>
+          <h3 class="achievement-title">🥇 3-Time 1st Position</h3>
+          <p>Achieved first position overall in class across three academic terms at St. Finian's Primary School.</p>
+        </div>
+        <div class="achievement-card" data-cat="leadership">
+          <div class="achievement-header"><span class="achievement-category">Leadership</span><span class="achievement-date">Primary</span></div>
+          <h3 class="achievement-title">👑 Primary Class Captain</h3>
+          <p>Served as Class Captain in primary school, organizing classroom activities and coordinating student affairs.</p>
+        </div>
+        <div class="achievement-card" data-cat="leadership">
+          <div class="achievement-header"><span class="achievement-category">Leadership</span><span class="achievement-date">High School</span></div>
+          <h3 class="achievement-title">⭐ 2-Time Assistant Captain</h3>
+          <p>Appointed Assistant Class Captain for two consecutive terms at Immaculate Heart Comprehensive High School.</p>
+        </div>
+        <div class="achievement-card" data-cat="leadership">
+          <div class="achievement-header"><span class="achievement-category">Leadership</span><span class="achievement-date">High School</span></div>
+          <h3 class="achievement-title">👑 High School Class Captain</h3>
+          <p>Promoted to full Class Captain, managing student discipline, communication with teachers, and academic order.</p>
+        </div>
+        <div class="achievement-card" data-cat="leadership">
+          <div class="achievement-header"><span class="achievement-category">Leadership</span><span class="achievement-date">High School</span></div>
+          <h3 class="achievement-title">🧹 Labour Prefect</h3>
+          <p>Served as Labour Prefect, directing school environmental maintenance, compound cleanliness, and student work rosters.</p>
+        </div>
+        <div class="achievement-card" data-cat="leadership">
+          <div class="achievement-header"><span class="achievement-category">Leadership</span><span class="achievement-date">High School</span></div>
+          <h3 class="achievement-title">⚡ Special Duty Prefect</h3>
+          <p>Appointed Special Duty Prefect to manage specialized school assignments, event protocols, and executive tasks.</p>
+        </div>
+        <div class="achievement-card" data-cat="recognition">
+          <div class="achievement-header"><span class="achievement-category">Recognition</span><span class="achievement-date">2024 / 2025</span></div>
+          <h3 class="achievement-title">🏆 Best Prefect 2024/2025</h3>
+          <p>Officially recognized and awarded Best Prefect for outstanding leadership, integrity, and service.</p>
+        </div>
+        <div class="achievement-card" data-cat="recognition">
+          <div class="achievement-header"><span class="achievement-category">Recognition</span><span class="achievement-date">2025 / 2026</span></div>
+          <h3 class="achievement-title">🏆 Best Prefect 2025/2026</h3>
+          <p>Awarded Best Prefect for a second consecutive session for sustained excellence in student governance.</p>
+        </div>
+        <div class="achievement-card" data-cat="academic">
+          <div class="achievement-header"><span class="achievement-category">Academic</span><span class="achievement-date">2025 / 2026</span></div>
+          <h3 class="achievement-title">🌟 Best Student 2025/2026</h3>
+          <p>Honored as the Best Overall Student of the session for academic performance and exemplary character.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SKILLS SECTION -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-emerald); color: var(--c-white);">05 / COMPETENCIES</div>
+      <h2 class="section-title">Skills &amp; Capabilities</h2>
+      <p class="section-subtitle">Core technical capabilities, analytical methods, and interpersonal leadership skills.</p>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3 class="skill-box-title">💻 Technical Development</h3>
+          <ul class="skill-list">
+            <li>Software Development Fundamentals</li>
+            <li>Web Development (HTML5, CSS3, JS)</li>
+            <li>Responsive Mobile-First Layouts</li>
+            <li>Progressive Web Apps (PWA)</li>
+            <li>Developer Tools &amp; Web Standards</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3 class="skill-box-title">🧠 Thinking &amp; Planning</h3>
+          <ul class="skill-list">
+            <li>Structured Problem Solving</li>
+            <li>Critical Thinking &amp; Analysis</li>
+            <li>Strategic Project Planning</li>
+            <li>Systematic Research &amp; Learning</li>
+            <li>Product &amp; Solution Architecture</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3 class="skill-box-title">👑 Leadership &amp; Governance</h3>
+          <ul class="skill-list">
+            <li>Team &amp; Class Supervision</li>
+            <li>Conflict Resolution &amp; Advising</li>
+            <li>Event &amp; Labor Management</li>
+            <li>Responsibility &amp; Accountability</li>
+            <li>Peer Mentorship &amp; Motivation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TECHNOLOGY SECTION -->
+  <section class="tech-section" id="technology">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-amber); color: var(--c-black);">06 / TECH INTERESTS</div>
+      <h2 class="section-title">Technology &amp; Innovation</h2>
+      <p class="section-subtitle">Areas of technology driving Dan Peter Etembe's research, study, and software projects.</p>
+
+      <div class="tech-interests-grid">
+        <div class="tech-card"><h3>⚡ Software Development</h3><p>Building clean, scalable, and efficient applications designed to solve concrete everyday problems for users.</p></div>
+        <div class="tech-card"><h3>🌐 Web Technologies &amp; PWAs</h3><p>Leveraging open web standards to create instant, reliable, accessible digital interfaces across all device types.</p></div>
+        <div class="tech-card"><h3>🤖 Artificial Intelligence</h3><p>Studying modern AI tooling, intelligent assistants, and computational logic to enhance workflow efficiency.</p></div>
+        <div class="tech-card"><h3>🚀 Digital Products &amp; EdTech</h3><p>Designing digital educational tools and utility products tailored to improve learning and productive habits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROJECTS SHOWCASE -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-blue); color: var(--c-white);">07 / PORTFOLIO</div>
+      <h2 class="section-title">Projects Showcase</h2>
+      <p class="section-subtitle">Demonstration projects and software built by Dan Peter Etembe.</p>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- 9. BLOG / JOURNAL SECTION -->
+  <section class="blog-section" id="blog">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-purple); color: var(--c-white);">08 / JOURNAL &amp; ARTICLES</div>
+      <h2 class="section-title">Blog &amp; Thought Archive</h2>
+      <p class="section-subtitle">Perspectives on technology, student leadership, problem solving, and software development by Dan Peter Etembe.</p>
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- 10. CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-tag" style="background-color: var(--c-emerald); color: var(--c-white);">09 / GET IN TOUCH</div>
+      <h2 class="section-title">Contact &amp; Connect</h2>
+      <p class="section-subtitle">Reach out for academic collaborations, technology discussions, or leadership initiatives.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3>Let's Connect 🤝</h3>
+          <p style="margin-bottom: 24px; font-size: 1.08rem;">
+            Whether you want to discuss technology, share educational ideas, or connect with Dan Peter Etembe, send a message through the form or official channels.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 12px;"><strong>EMAIL:</strong> contact@danpeteretembe.com</div>
+          <div style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 24px;"><strong>LOCATION:</strong> Lagos, Nigeria</div>
+
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-gold); font-weight: 800; margin-bottom: 14px;">CONNECT ON SOCIAL MEDIA</div>
+          <div class="social-placeholders">
+            <button class="social-btn" onclick="alert('GitHub profile placeholder')">GitHub ↗</button>
+            <button class="social-btn" onclick="alert('LinkedIn profile placeholder')">LinkedIn ↗</button>
+            <button class="social-btn" onclick="alert('X / Twitter profile placeholder')">X (Twitter) ↗</button>
+            <button class="social-btn" onclick="alert('Facebook profile placeholder')">Facebook ↗</button>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-group"><label for="contactName">Your Full Name *</label><input type="text" id="contactName" class="form-control" required placeholder="e.g. John Doe" /></div>
+            <div class="form-group"><label for="contactEmail">Your Email Address *</label><input type="email" id="contactEmail" class="form-control" required placeholder="e.g. john@example.com" /></div>
+            <div class="form-group"><label for="contactSubject">Subject *</label><input type="text" id="contactSubject" class="form-control" required placeholder="e.g. Technology Collaboration" /></div>
+            <div class="form-group"><label for="contactMessage">Message *</label><textarea id="contactMessage" class="form-control" required placeholder="Write your message here..."></textarea></div>
+            <button type="submit" class="btn btn-coral" style="width: 100%;">SEND MESSAGE NOW 🚀</button>
+            <div id="contactFormStatus" style="margin-top: 16px; font-family: var(--font-mono); font-size: 0.9rem; text-align: center; font-weight: 700;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Dan Peter Etembe</div>
+          <p style="color: #ccc; max-width: 420px; font-size: 0.98rem; line-height: 1.6;">
+            Student • Solo Developer • Technology Enthusiast • Problem Solver. Dedicated to building impactful digital solutions and pursuing excellence.
+          </p>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; color: var(--c-gold); margin-bottom: 16px; text-transform: uppercase;">Quick Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Biography</a></li>
+            <li><a href="#story">My Story</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; color: var(--c-gold); margin-bottom: 16px; text-transform: uppercase;">Portfolio &amp; Writing</div>
+          <ul class="footer-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog Articles</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dan Peter Etembe. All rights reserved.</div>
+        <div>Connected to Supabase &amp; Strengthened Passcode</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ARTICLE READING MODAL -->
+  <div class="modal-backdrop" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal-btn" onclick="closeArticleModal()">✕</button>
+      <div class="section-tag" id="modalCategory" style="background-color: var(--c-gold); color: var(--c-black);">TECHNOLOGY</div>
+      <h1 id="modalTitle" style="font-size: 2.2rem; margin-bottom: 12px; color: var(--c-black);"></h1>
+      <div class="blog-meta" id="modalMeta" style="margin-bottom: 24px;"></div>
+      <hr style="border: 0; border-top: 3px solid var(--border-black); margin-bottom: 24px;" />
+      <div class="article-body-html" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ADMIN CMS MODAL (PRIVATE CONTROL AREA) -->
+  <div class="modal-backdrop" id="adminModal">
+    <div class="modal-card" style="max-width: 950px;">
+      <button class="close-modal-btn" onclick="closeAdminModal()">✕</button>
+
+      <!-- PIN AUTH CONTAINER -->
+      <div id="adminAuthBox">
+        <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--c-blue);">Private Admin Portal</h2>
+        <p style="margin-bottom: 20px; font-size: 1rem;">Enter security passcode to unlock management features:</p>
+        <div class="form-group">
+          <input type="password" id="adminPinInput" class="form-control" placeholder="Enter Security Passcode" style="max-width: 320px;" />
+        </div>
+        <button class="btn btn-blue" onclick="verifyAdminPin()">UNLOCK PORTAL</button>
+        <div id="pinError" style="color: var(--c-coral); margin-top: 14px; font-family: var(--font-mono); font-weight: 800; font-size: 0.9rem;"></div>
+      </div>
+
+      <!-- CMS EDITOR CONTAINER (HIDDEN UNTIL AUTH PASSCODE) -->
+      <div id="adminEditorBox" style="display: none;">
+        <div style="display: flex; gap: 16px; margin-bottom: 24px; border-bottom: 3px solid var(--border-black); padding-bottom: 16px; flex-wrap: wrap;">
+          <button class="btn btn-purple btn-sm" id="tabBlogBtn" onclick="switchAdminTab('blog')">📝 MANAGE BLOG ARTICLES</button>
+          <button class="btn btn-gold btn-sm" id="tabProjectsBtn" onclick="switchAdminTab('projects')">🚀 MANAGE PROJECTS</button>
+          <button class="btn btn-emerald btn-sm" id="tabSupaBtn" onclick="switchAdminTab('supa')">⚡ SUPABASE CONFIG</button>
+        </div>
+
+        <!-- SUPABASE CONFIG TAB -->
+        <div id="adminSupaTab" style="display: none;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--c-emerald);">Supabase Database Integration</h3>
+          <p style="margin-bottom: 20px; font-size: 0.95rem;">Configure your Supabase Project URL and Anon Public Key below. Once connected, your articles and projects will sync directly to Supabase cloud tables!</p>
+
+          <div class="form-group">
+            <label for="supaUrl">Supabase Project URL</label>
+            <input type="text" id="supaUrl" class="form-control" placeholder="https://xyzcompany.supabase.co" />
+          </div>
+
+          <div class="form-group">
+            <label for="supaKey">Supabase Anon Key</label>
+            <input type="password" id="supaKey" class="form-control" placeholder="eyJhbGciOiJIUzI1NiIsInR5..." />
+          </div>
+
+          <button class="btn btn-emerald" onclick="saveSupabaseConfig()">CONNECT &amp; SAVE SUPABASE CONFIG</button>
+          <div id="supaStatus" style="margin-top: 14px; font-family: var(--font-mono); font-weight: 700; font-size: 0.9rem;"></div>
+
+          <div style="margin-top: 24px; background: rgba(0,0,0,0.05); padding: 16px; border-radius: 8px; border: 2px dashed var(--border-black);">
+            <h4 style="font-size: 1rem; margin-bottom: 8px; color: var(--c-purple);">⚡ Quick Supabase Database Table Setup (SQL Script)</h4>
+            <p style="font-size: 0.85rem; margin-bottom: 10px;">Run this SQL script in your Supabase SQL Editor to create the <code>posts</code> and <code>projects</code> tables with public read/write access:</p>
+            <pre style="background: #1e1e2e; color: #a6adc8; padding: 12px; border-radius: 6px; font-size: 0.8rem; overflow-x: auto; font-family: var(--font-mono);">
+-- Create Blog Posts Table
+CREATE TABLE IF NOT EXISTS public.posts (
+  id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  slug TEXT UNIQUE NOT NULL,
+  category TEXT NOT NULL,
+  excerpt TEXT,
+  content TEXT,
+  date TEXT,
+  "readTime" TEXT,
+  author TEXT,
+  status TEXT DEFAULT 'published'
+);
+
+-- Create Projects Table
+CREATE TABLE IF NOT EXISTS public.projects (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  description TEXT,
+  status TEXT,
+  techs JSONB,
+  role TEXT,
+  "liveUrl" TEXT,
+  "githubUrl" TEXT
+);
+
+-- Enable RLS & Allow Access
+ALTER TABLE public.posts ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.projects ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read/write for posts" ON public.posts FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow public read/write for projects" ON public.projects FOR ALL USING (true) WITH CHECK (true);
+            </pre>
+          </div>
+        </div>
+
+        <!-- BLOG EDITOR TAB -->
+        <div id="adminBlogTab">
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--c-purple);">Blog Post Management</h3>
+          <form id="blogPostForm" onsubmit="handleSavePost(event)">
+            <input type="hidden" id="editPostId" value="" />
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="postTitle">Article Title *</label>
+                <input type="text" id="postTitle" class="form-control" required placeholder="e.g. Building Digital Products in Nigeria" />
+              </div>
+
+              <div class="form-group">
+                <label for="postCategory">Category *</label>
+                <select id="postCategory" class="form-control" required>
+                  <option value="Technology">Technology</option>
+                  <option value="Programming">Programming</option>
+                  <option value="Education">Education</option>
+                  <option value="Leadership">Leadership</option>
+                  <option value="Problem Solving">Problem Solving</option>
+                  <option value="Personal Growth">Personal Growth</option>
+                  <option value="Innovation">Innovation</option>
+                  <option value="Projects">Projects</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="postExcerpt">Short Excerpt *</label>
+              <textarea id="postExcerpt" class="form-control" style="min-height: 70px;" required placeholder="Brief summary..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="postContent">Full Content (HTML Supported) *</label>
+              <textarea id="postContent" class="form-control" style="min-height: 180px;" required placeholder="<p>Full article text...</p>"></textarea>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+              <div class="form-group"><label for="postDate">Date</label><input type="date" id="postDate" class="form-control" /></div>
+              <div class="form-group"><label for="postReadTime">Reading Time</label><input type="text" id="postReadTime" class="form-control" placeholder="e.g. 4 min read" /></div>
+              <div class="form-group">
+                <label for="postStatus">Status</label>
+                <select id="postStatus" class="form-control">
+                  <option value="published">Published</option>
+                  <option value="draft">Draft</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; margin-top: 16px;">
+              <button type="submit" class="btn btn-purple">SAVE ARTICLE</button>
+              <button type="button" class="btn btn-white" onclick="resetPostForm()">NEW ARTICLE</button>
+            </div>
+          </form>
+
+          <hr style="border: 0; border-top: 2px solid var(--border-black); margin: 32px 0 20px;" />
+          <h4 style="font-size: 1.2rem; margin-bottom: 14px;">Existing Articles</h4>
+          <div id="adminPostsList" style="display: flex; flex-direction: column; gap: 12px;"></div>
+        </div>
+
+        <!-- PROJECTS EDITOR TAB -->
+        <div id="adminProjectsTab" style="display: none;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--c-blue);">Project Management</h3>
+          <form id="projectForm" onsubmit="handleSaveProject(event)">
+            <input type="hidden" id="editProjectId" value="" />
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group"><label for="projName">Project Name *</label><input type="text" id="projName" class="form-control" required placeholder="e.g. Academic Planner PWA" /></div>
+              <div class="form-group"><label for="projStatus">Status *</label><input type="text" id="projStatus" class="form-control" required placeholder="e.g. LIVE SYSTEM or IN DEVELOPMENT" /></div>
+            </div>
+
+            <div class="form-group"><label for="projDesc">Project Description *</label><textarea id="projDesc" class="form-control" style="min-height: 80px;" required placeholder="Summary of what the project does..."></textarea></div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group"><label for="projTechs">Technologies (comma separated) *</label><input type="text" id="projTechs" class="form-control" required placeholder="e.g. HTML5, CSS3, JS, PWA" /></div>
+              <div class="form-group"><label for="projRole">Role *</label><input type="text" id="projRole" class="form-control" required placeholder="e.g. Creator & Solo Developer" /></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group"><label for="projLive">Live URL / Action</label><input type="text" id="projLive" class="form-control" placeholder="e.g. https://... or #hero" /></div>
+              <div class="form-group"><label for="projGithub">GitHub Repo URL</label><input type="text" id="projGithub" class="form-control" placeholder="e.g. https://github.com/..." /></div>
+            </div>
+
+            <div style="display: flex; gap: 14px; margin-top: 16px;">
+              <button type="submit" class="btn btn-gold">SAVE PROJECT</button>
+              <button type="button" class="btn btn-white" onclick="resetProjectForm()">NEW PROJECT</button>
+            </div>
+          </form>
+
+          <hr style="border: 0; border-top: 2px solid var(--border-black); margin: 32px 0 20px;" />
+          <h4 style="font-size: 1.2rem; margin-bottom: 14px;">Existing Projects</h4>
+          <div id="adminProjectsList" style="display: flex; flex-direction: column; gap: 12px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT SYSTEM WITH SUPABASE INTEGRATION -->
+  <script>
+    // PASSCODE STRENGTHENED TO "Pointone"
+    const ADMIN_PASSCODE = "Pointone";
+
+    // INITIAL BLOG POSTS
+    const DEFAULT_BLOG_POSTS = [
+      {
+        id: "post-1",
+        title: "The Mindset of a Solo Developer in Nigeria ⚡",
+        slug: "mindset-solo-developer-nigeria",
+        category: "Technology",
+        excerpt: "Exploring self-driven learning, solving real problems with code, and building digital tools independently in Nigeria.",
+        content: `
+          <p>Building software as a solo developer requires intense discipline, strategic planning, and continuous curiosity. In Nigeria, the tech ecosystem is growing rapidly, but taking initiative on your own provides a unique freedom to experiment.</p>
+          <h2>Focusing on Fundamentals</h2>
+          <p>Rather than jumping between frameworks without purpose, mastering fundamental web technologies—HTML, CSS, JavaScript, web standards, and algorithms—provides a solid foundation. Software engineering is ultimately about solving human problems efficiently.</p>
+          <h2>Consistency and Future Ambition</h2>
+          <p>My goal is simple: to be the best in whatever I do. Every line of code written today is a step toward building larger digital systems tomorrow.</p>
+        `,
+        date: "2026-08-28",
+        readTime: "4 min read",
+        author: "Dan Peter Etembe",
+        status: "published"
+      },
+      {
+        id: "post-2",
+        title: "Leadership and Responsibility in High School 👑",
+        slug: "leadership-responsibility-high-school",
+        category: "Leadership",
+        excerpt: "Lessons learned from serving as Class Captain, Labour Prefect, and Special Duty Prefect while maintaining academic focus.",
+        content: `
+          <p>Leadership is not merely a title; it is a commitment to service, organization, and leading by example. Serving in roles such as Labour Prefect and Special Duty Prefect at Immaculate Heart Comprehensive High School has taught me vital lessons in human management and accountability.</p>
+          <h2>Balancing Discipline and Empathy</h2>
+          <p>Directing school activities requires clear communication, consistency, and fairness. A good leader sets standards that peers respect naturally.</p>
+          <h2>Recognition and Continuous Growth</h2>
+          <p>Being named Best Prefect for two consecutive sessions is both an honor and a reminder to remain humble, dedicated, and focused on excellence in all future endeavors.</p>
+        `,
+        date: "2026-08-15",
+        readTime: "3 min read",
+        author: "Dan Peter Etembe",
+        status: "published"
+      }
+    ];
+
+    // INITIAL PROJECTS DATA
+    const DEFAULT_PROJECTS = [
+      {
+        id: "proj-1",
+        name: "Personal Authority Website & CMS 🚀",
+        description: "A mobile-first, high-performance personal authority website featuring vibrant multi-color flat design aesthetics and an integrated local/Supabase content management system for blogs and projects.",
+        status: "LIVE SYSTEM",
+        techs: ["HTML5", "Vanilla CSS", "JavaScript", "JSON-LD", "Supabase"],
+        role: "Creator & Solo Developer",
+        liveUrl: "#hero",
+        githubUrl: "#"
+      },
+      {
+        id: "proj-2",
+        name: "Student Academic Planner PWA 📱",
+        description: "A progressive web application designed to help high school students track assignments, study schedules, exam preparation, and academic achievements offline.",
+        status: "IN DEVELOPMENT",
+        techs: ["PWA", "JavaScript", "LocalStorage", "HTML5"],
+        role: "Lead Developer",
+        liveUrl: "#",
+        githubUrl: "#"
+      }
+    ];
+
+    // SUPABASE CLIENT VARIABLE
+    let supabaseClient = null;
+
+    function initSupabase() {
+      const url = localStorage.getItem('dpe_supa_url');
+      const key = localStorage.getItem('dpe_supa_key');
+      if (url && key && window.supabase) {
+        supabaseClient = window.supabase.createClient(url, key);
+      }
+    }
+
+    function saveSupabaseConfig() {
+      const url = document.getElementById('supaUrl').value.trim();
+      const key = document.getElementById('supaKey').value.trim();
+      if (!url || !key) {
+        alert('Please enter both Supabase URL and Key.');
+        return;
+      }
+      localStorage.setItem('dpe_supa_url', url);
+      localStorage.setItem('dpe_supa_key', key);
+      initSupabase();
+      document.getElementById('supaStatus').style.color = 'var(--c-emerald)';
+      document.getElementById('supaStatus').textContent = '✓ Supabase Client initialized successfully!';
+    }
+
+    // LOCAL STORAGE / SUPABASE DUAL DATA MANAGEMENT
+    async function getStoredPosts() {
+      if (supabaseClient) {
+        try {
+          const { data, error } = await supabaseClient.from('posts').select('*');
+          if (!error && data && data.length > 0) return data;
+        } catch (e) { console.log('Supabase fetch fallback to local:', e); }
+      }
+      const stored = localStorage.getItem('dpe_blog_posts');
+      if (!stored) {
+        localStorage.setItem('dpe_blog_posts', JSON.stringify(DEFAULT_BLOG_POSTS));
+        return DEFAULT_BLOG_POSTS;
+      }
+      return JSON.parse(stored);
+    }
+
+    async function savePostsToStorage(posts) {
+      localStorage.setItem('dpe_blog_posts', JSON.stringify(posts));
+      if (supabaseClient) {
+        try {
+          await supabaseClient.from('posts').upsert(posts);
+        } catch (e) { console.log('Supabase sync error:', e); }
+      }
+    }
+
+    async function getStoredProjects() {
+      if (supabaseClient) {
+        try {
+          const { data, error } = await supabaseClient.from('projects').select('*');
+          if (!error && data && data.length > 0) return data;
+        } catch (e) { console.log('Supabase fetch fallback to local:', e); }
+      }
+      const stored = localStorage.getItem('dpe_projects');
+      if (!stored) {
+        localStorage.setItem('dpe_projects', JSON.stringify(DEFAULT_PROJECTS));
+        return DEFAULT_PROJECTS;
+      }
+      return JSON.parse(stored);
+    }
+
+    async function saveProjectsToStorage(projects) {
+      localStorage.setItem('dpe_projects', JSON.stringify(projects));
+      if (supabaseClient) {
+        try {
+          await supabaseClient.from('projects').upsert(projects);
+        } catch (e) { console.log('Supabase sync error:', e); }
+      }
+    }
+
+    // RENDER PUBLIC BLOG
+    async function renderPublicBlog() {
+      const allPosts = await getStoredPosts();
+      const posts = allPosts.filter(p => p.status === 'published');
+      const grid = document.getElementById('blogGrid');
+      grid.innerHTML = '';
+
+      if (posts.length === 0) {
+        grid.innerHTML = '<p>No published articles found.</p>';
+        return;
+      }
+
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'blog-card';
+        card.innerHTML = `
+          <div class="blog-card-img">${post.title}</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-category">${post.category.toUpperCase()}</span>
+              <span>•</span>
+              <span>${post.date}</span>
+              <span>•</span>
+              <span>${post.readTime || '3 min read'}</span>
+            </div>
+            <h3 class="blog-title">${post.title}</h3>
+            <p class="blog-excerpt">${post.excerpt}</p>
+            <button class="btn btn-purple btn-sm" onclick="openArticleModal('${post.id}')" style="align-self: flex-start;">READ ARTICLE ↗</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // RENDER PUBLIC PROJECTS
+    async function renderPublicProjects() {
+      const projects = await getStoredProjects();
+      const grid = document.getElementById('projectsGrid');
+      grid.innerHTML = '';
+
+      if (projects.length === 0) {
+        grid.innerHTML = '<p>No projects found.</p>';
+        return;
+      }
+
+      projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        const techsList = Array.isArray(proj.techs) ? proj.techs : (proj.techs ? proj.techs.split(',') : []);
+        const techsHtml = techsList.map(t => `<span class="tech-tag">${t.trim()}</span>`).join('');
+        card.innerHTML = `
+          <div class="project-body">
+            <span class="project-status">${proj.status}</span>
+            <h3 class="project-title">${proj.name}</h3>
+            <p style="font-size: 0.98rem; color: #222; margin-bottom: 14px;">${proj.description}</p>
+            <div class="project-techs">${techsHtml}</div>
+            <p style="font-size: 0.9rem;"><strong>Role:</strong> ${proj.role}</p>
+          </div>
+          <div class="project-footer">
+            <a href="${proj.liveUrl || '#'}" class="btn btn-gold btn-sm" onclick="${proj.liveUrl === '#' ? "alert('Live link placeholder')" : ""}">VIEW PROJECT ↗</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // ARTICLE READING MODAL
+    async function openArticleModal(postId) {
+      const posts = await getStoredPosts();
+      const post = posts.find(p => p.id === postId);
+      if (!post) return;
+
+      document.getElementById('modalCategory').textContent = post.category.toUpperCase();
+      document.getElementById('modalTitle').textContent = post.title;
+      document.getElementById('modalMeta').innerHTML = `
+        <strong>Author:</strong> ${post.author || 'Dan Peter Etembe'} &nbsp;|&nbsp;
+        <strong>Date:</strong> ${post.date} &nbsp;|&nbsp;
+        <strong>Reading Time:</strong> ${post.readTime || '3 min read'}
+      `;
+      document.getElementById('modalBody').innerHTML = post.content;
+
+      document.getElementById('articleModal').classList.add('active');
+      window.location.hash = `blog/${post.slug}`;
+    }
+
+    function closeArticleModal() {
+      document.getElementById('articleModal').classList.remove('active');
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    // ADMIN CMS MODAL & AUTH
+    function openAdminModal(tab = 'blog') {
+      document.getElementById('adminModal').classList.add('active');
+      switchAdminTab(tab);
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.remove('active');
+    }
+
+    function verifyAdminPin() {
+      const pin = document.getElementById('adminPinInput').value;
+      if (pin === ADMIN_PASSCODE) {
+        document.getElementById('adminAuthBox').style.display = 'none';
+        document.getElementById('adminEditorBox').style.display = 'block';
+        
+        // Load stored Supabase inputs
+        document.getElementById('supaUrl').value = localStorage.getItem('dpe_supa_url') || '';
+        document.getElementById('supaKey').value = localStorage.getItem('dpe_supa_key') || '';
+
+        renderAdminPostsList();
+        renderAdminProjectsList();
+      } else {
+        document.getElementById('pinError').textContent = 'Incorrect Passcode. Access Denied.';
+      }
+    }
+
+    function switchAdminTab(tab) {
+      document.getElementById('adminBlogTab').style.display = tab === 'blog' ? 'block' : 'none';
+      document.getElementById('adminProjectsTab').style.display = tab === 'projects' ? 'block' : 'none';
+      document.getElementById('adminSupaTab').style.display = tab === 'supa' ? 'block' : 'none';
+    }
+
+    // ADMIN BLOG CRUD
+    async function renderAdminPostsList() {
+      const posts = await getStoredPosts();
+      const listContainer = document.getElementById('adminPostsList');
+      listContainer.innerHTML = '';
+
+      posts.forEach(post => {
+        const item = document.createElement('div');
+        item.style.cssText = 'border: 2px solid var(--border-black); padding: 14px; background: var(--c-white); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; box-shadow: 3px 3px 0px var(--border-black);';
+        item.innerHTML = `
+          <div>
+            <strong>${post.title}</strong>
+            <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #555;">
+              Category: ${post.category} | Status: <strong style="color: ${post.status === 'published' ? 'green' : 'orange'};">${post.status.toUpperCase()}</strong>
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn btn-gold btn-sm" onclick="editPost('${post.id}')">EDIT</button>
+            <button class="btn btn-purple btn-sm" onclick="togglePublish('${post.id}')">${post.status === 'published' ? 'UNPUBLISH' : 'PUBLISH'}</button>
+            <button class="btn btn-coral btn-sm" onclick="deletePost('${post.id}')">DELETE</button>
+          </div>
+        `;
+        listContainer.appendChild(item);
+      });
+    }
+
+    async function handleSavePost(e) {
+      e.preventDefault();
+      const id = document.getElementById('editPostId').value || 'post-' + Date.now();
+      const title = document.getElementById('postTitle').value;
+      const category = document.getElementById('postCategory').value;
+      const excerpt = document.getElementById('postExcerpt').value;
+      const content = document.getElementById('postContent').value;
+      const date = document.getElementById('postDate').value || new Date().toISOString().split('T')[0];
+      const readTime = document.getElementById('postReadTime').value || '3 min read';
+      const status = document.getElementById('postStatus').value;
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+      let posts = await getStoredPosts();
+      const idx = posts.findIndex(p => p.id === id);
+      const postObj = { id, title, slug, category, excerpt, content, date, readTime, author: 'Dan Peter Etembe', status };
+
+      if (idx >= 0) posts[idx] = postObj;
+      else posts.unshift(postObj);
+
+      await savePostsToStorage(posts);
+      resetPostForm();
+      renderAdminPostsList();
+      renderPublicBlog();
+      alert('Blog Post Saved Successfully!');
+    }
+
+    async function editPost(id) {
+      const posts = await getStoredPosts();
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById('editPostId').value = post.id;
+      document.getElementById('postTitle').value = post.title;
+      document.getElementById('postCategory').value = post.category;
+      document.getElementById('postExcerpt').value = post.excerpt;
+      document.getElementById('postContent').value = post.content;
+      document.getElementById('postDate').value = post.date;
+      document.getElementById('postReadTime').value = post.readTime;
+      document.getElementById('postStatus').value = post.status;
+    }
+
+    function resetPostForm() {
+      document.getElementById('editPostId').value = '';
+      document.getElementById('blogPostForm').reset();
+    }
+
+    async function togglePublish(id) {
+      let posts = await getStoredPosts();
+      const post = posts.find(p => p.id === id);
+      if (post) {
+        post.status = post.status === 'published' ? 'draft' : 'published';
+        await savePostsToStorage(posts);
+        renderAdminPostsList();
+        renderPublicBlog();
+      }
+    }
+
+    async function deletePost(id) {
+      if (confirm('Are you sure you want to delete this blog post?')) {
+        let posts = await getStoredPosts();
+        posts = posts.filter(p => p.id !== id);
+        await savePostsToStorage(posts);
+        renderAdminPostsList();
+        renderPublicBlog();
+      }
+    }
+
+    // ADMIN PROJECTS CRUD
+    async function renderAdminProjectsList() {
+      const projects = await getStoredProjects();
+      const listContainer = document.getElementById('adminProjectsList');
+      listContainer.innerHTML = '';
+
+      projects.forEach(proj => {
+        const item = document.createElement('div');
+        item.style.cssText = 'border: 2px solid var(--border-black); padding: 14px; background: var(--c-white); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; box-shadow: 3px 3px 0px var(--border-black);';
+        const techsDisplay = Array.isArray(proj.techs) ? proj.techs.join(', ') : proj.techs;
+        item.innerHTML = `
+          <div>
+            <strong>${proj.name}</strong>
+            <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #555;">
+              Status: <strong>${proj.status}</strong> | Techs: ${techsDisplay}
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn btn-gold btn-sm" onclick="editProject('${proj.id}')">EDIT</button>
+            <button class="btn btn-coral btn-sm" onclick="deleteProject('${proj.id}')">DELETE</button>
+          </div>
+        `;
+        listContainer.appendChild(item);
+      });
+    }
+
+    async function handleSaveProject(e) {
+      e.preventDefault();
+      const id = document.getElementById('editProjectId').value || 'proj-' + Date.now();
+      const name = document.getElementById('projName').value;
+      const status = document.getElementById('projStatus').value;
+      const description = document.getElementById('projDesc').value;
+      const techsStr = document.getElementById('projTechs').value;
+      const role = document.getElementById('projRole').value;
+      const liveUrl = document.getElementById('projLive').value || '#';
+      const githubUrl = document.getElementById('projGithub').value || '#';
+
+      const techs = techsStr.split(',').map(t => t.trim()).filter(t => t.length > 0);
+
+      let projects = await getStoredProjects();
+      const idx = projects.findIndex(p => p.id === id);
+      const projObj = { id, name, status, description, techs, role, liveUrl, githubUrl };
+
+      if (idx >= 0) projects[idx] = projObj;
+      else projects.unshift(projObj);
+
+      await saveProjectsToStorage(projects);
+      resetProjectForm();
+      renderAdminProjectsList();
+      renderPublicProjects();
+      alert('Project Saved Successfully!');
+    }
+
+    async function editProject(id) {
+      const projects = await getStoredProjects();
+      const proj = projects.find(p => p.id === id);
+      if (!proj) return;
+
+      document.getElementById('editProjectId').value = proj.id;
+      document.getElementById('projName').value = proj.name;
+      document.getElementById('projStatus').value = proj.status;
+      document.getElementById('projDesc').value = proj.description;
+      document.getElementById('projTechs').value = Array.isArray(proj.techs) ? proj.techs.join(', ') : proj.techs;
+      document.getElementById('projRole').value = proj.role;
+      document.getElementById('projLive').value = proj.liveUrl;
+      document.getElementById('projGithub').value = proj.githubUrl;
+    }
+
+    function resetProjectForm() {
+      document.getElementById('editProjectId').value = '';
+      document.getElementById('projectForm').reset();
+    }
+
+    async function deleteProject(id) {
+      if (confirm('Are you sure you want to delete this project?')) {
+        let projects = await getStoredProjects();
+        projects = projects.filter(p => p.id !== id);
+        await saveProjectsToStorage(projects);
+        renderAdminProjectsList();
+        renderPublicProjects();
+      }
+    }
+
+    // ACHIEVEMENTS FILTERING
+    function filterAchievements(cat, event) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      if (event) event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.achievement-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // CONTACT FORM HANDLING
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const statusDiv = document.getElementById('contactFormStatus');
+      statusDiv.style.color = 'var(--c-emerald)';
+      statusDiv.textContent = '✓ Thank you! Your message has been sent successfully.';
+      document.getElementById('contactForm').reset();
+    }
+
+    // MOBILE MENU TOGGLE
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // SHORTCUT ALT + A FOR ADMIN CMS PORTAL
+    window.addEventListener('keydown', function(e) {
+      if (e.altKey && (e.key === 'a' || e.key === 'A')) {
+        openAdminModal('blog');
+      }
+    });
+
+    // INITIAL LOAD RENDER
+    window.addEventListener('DOMContentLoaded', () => {
+      initSupabase();
+      renderPublicBlog();
+      renderPublicProjects();
+
+      if (window.location.hash.startsWith('#blog/')) {
+        const slug = window.location.hash.replace('#blog/', '');
+        getStoredPosts().then(posts => {
+          const found = posts.find(p => p.slug === slug);
+          if (found) openArticleModal(found.id);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
